@@ -22,7 +22,7 @@ async function createConnection() {
 export const client = await createConnection();
 
 app.get("/", function(req, res){
-    res.send("Hello World");
+    res.send("<h1>Mentor and Student Assigning API</h1> \n<h3>1. For mentor details use, /mentor</h3> \n<h3>2. For specific mentor details use, /mentor/:mentor_name</h3> \n<h3>3. For student details use, /student</h3> \n<h3>4. For specific student details use, /student/:student_name</h3>");
 });
 
 app.use("/mentor", mentorRouter);
